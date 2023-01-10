@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #83b7f3;
+  background-color: #338cf4;
 }
 .container {
   background-color: #ffffff;
@@ -25,10 +25,11 @@ body {
 }
 button {
   height: 28px;
-  width: 38px;
+  width: 28px;
   display: grid;
   place-items: center;
   border-radius: 3px;
+  border: none;
   background-color: #ffffff;
   outline: none;
   color: #020929;
@@ -39,13 +40,22 @@ select {
   display: grid;
   place-items: center;
   border-radius: 3px;
+  border: none;
   background-color: #ffffff;
   outline: none;
   color: #020929;
-
 }
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
 .text-input {
   outline: none;
+  border: 1px solid black;
   padding: 25px;
   margin-top: 10px;
   height: 50vh;

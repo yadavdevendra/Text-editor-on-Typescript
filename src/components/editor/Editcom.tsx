@@ -15,7 +15,9 @@ export function Editcom({ data }: any): ReactElement {
     let myDivElement = useRef(null);
     function onHeading1Click(e: any) {
         const heading: string = e.target.value
-        document.execCommand('formatBlock', false, `<${heading}>`);
+        if(heading){
+        document.execCommand('formatBlock', true, `<${heading}>`);
+        }
     }
     const handlechange = (event: any) => {
         setfirst(event.relatedTarget)
@@ -23,6 +25,7 @@ export function Editcom({ data }: any): ReactElement {
 
     const handlebold = () => {
         document.execCommand("bold");
+        
     };
 
     const handleitalic = () => {
@@ -59,7 +62,7 @@ export function Editcom({ data }: any): ReactElement {
         document.execCommand("justifyRight");
     }
     function handleInsertImage() {
-        document.execCommand("inserImage", false, "<img src={} alt='image'>");
+        document.execCommand("inserImage", true, "<img/>");
     }
     function handleSave() {
 
@@ -82,6 +85,7 @@ export function Editcom({ data }: any): ReactElement {
 
                     {/*  Link */}
                     <button onClick={handlecreateLink}><FaLink /></button>
+                    <button onClick={handleInsertImage}><FaCamera /></button>
 
                     {/*  Alignment */}
                     <button onClick={handlejustifyCenter}><FaAlignCenter /></button>
@@ -95,6 +99,7 @@ export function Editcom({ data }: any): ReactElement {
                         ))}
                     </select>
                       {/*  Save Button only */}
+                    <button className="option-button spacing" onClick={handleSave}>Save</button>
                 </div>
                 <div ref={myDivElement} className="text-input" contentEditable={true} suppressContentEditableWarning={true} onMouseEnter={handlechange}>
                     {parse(data)}
