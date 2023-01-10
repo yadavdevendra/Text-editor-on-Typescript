@@ -20,6 +20,7 @@ function App() {
     return (
         <div>
             <Editcom data={data} />
+         
         </div>
     );
 }
