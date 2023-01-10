@@ -82,7 +82,6 @@ export function Editcom({ data }: any): ReactElement {
 
                     {/*  Link */}
                     <button onClick={handlecreateLink}><FaLink /></button>
-                    <button onClick={handleInsertImage}><FaCamera /></button>
 
                     {/*  Alignment */}
                     <button onClick={handlejustifyCenter}><FaAlignCenter /></button>
@@ -96,7 +95,6 @@ export function Editcom({ data }: any): ReactElement {
                         ))}
                     </select>
                       {/*  Save Button only */}
-                    <button className="option-button spacing" onClick={handleSave}>Save</button>
                 </div>
                 <div ref={myDivElement} className="text-input" contentEditable={true} suppressContentEditableWarning={true} onMouseEnter={handlechange}>
                     {parse(data)}
