@@ -5,7 +5,7 @@ import {options} from './data'
 import "../../App.css";
 import {
     FaBootstrap, FaItalic, FaUnderline, FaAlignCenter, FaAlignLeft, FaAlignRight, FaLink,
-    FaListOl, FaListUl, FaCamera, FaUndo, FaRedo,
+    FaListOl, FaListUl, FaUndo, FaRedo,
 } from "react-icons/fa";
 
 export function Editcom({ data }: any): ReactElement {
@@ -22,20 +22,15 @@ export function Editcom({ data }: any): ReactElement {
     const handlechange = (event: any) => {
         setfirst(event.relatedTarget)
     }
-
     const handlebold = () => {
-        document.execCommand("bold");
-        
+        document.execCommand("bold")
     };
-
     const handleitalic = () => {
         document.execCommand("italic");
     };
-
     function handleunderline() {
         document.execCommand("underline");
     }
-
     const handleOlClick = () => {
         document.execCommand("insertOrderedList");
     };
@@ -61,12 +56,7 @@ export function Editcom({ data }: any): ReactElement {
     function handlejustifyRight() {
         document.execCommand("justifyRight");
     }
-    function handleInsertImage() {
-        document.execCommand("inserImage", true, "<img/>");
-    }
-    function handleSave() {
-
-    }
+  
     return (
         <>
             <div className="container">
@@ -85,7 +75,6 @@ export function Editcom({ data }: any): ReactElement {
 
                     {/*  Link */}
                     <button onClick={handlecreateLink}><FaLink /></button>
-                    <button onClick={handleInsertImage}><FaCamera /></button>
 
                     {/*  Alignment */}
                     <button onClick={handlejustifyCenter}><FaAlignCenter /></button>
@@ -99,7 +88,6 @@ export function Editcom({ data }: any): ReactElement {
                         ))}
                     </select>
                       {/*  Save Button only */}
-                    <button className="option-button spacing" onClick={handleSave}>Save</button>
                 </div>
                 <div ref={myDivElement} className="text-input" contentEditable={true} suppressContentEditableWarning={true} onMouseEnter={handlechange}>
                     {parse(data)}
