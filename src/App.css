@@ -23,6 +23,7 @@ body {
   align-items: center;
   gap: 15px;
 }
+
 button {
   height: 28px;
   width: 28px;
@@ -33,6 +34,14 @@ button {
   background-color: #ffffff;
   color: #020929;
 }
+button:hover {background-color: #717571}
+
+button:active {
+  background-color: #717571;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 select {
   height: 28px;
   width: 38px;
@@ -43,17 +52,15 @@ select {
   background-color: #ffffff;
   color: #020929;
 }
-
 .input-wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
-
 .text-input {
   outline: none;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 10px;
   padding: 25px;
   margin-top: 10px;
   height: 50vh;
@@ -61,6 +68,6 @@ select {
   overflow-y: auto;
   width: 70vw;
 }
-.active {
-  background-color: #e0e9ff;
+img{
+  width: 50px;
 }
