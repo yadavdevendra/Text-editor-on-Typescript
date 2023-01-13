@@ -89,6 +89,7 @@ img{
 }
 
 .container {
+  text-align: center;
   background-color: #ffffff;
   width: 100vw;
   padding: 50px 30px;
