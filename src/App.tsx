@@ -1,10 +1,9 @@
 import "./App.css";
 import { Editcom } from "./components/editor/Editcom";
-import {Imagecom } from "./components/editor/Imagecom";
 
 function App() {
     const data: any = `<h2>The Flavorful Tuscany Meetup</h2>
-    <h3>Welcome letter</h3>
+    <h3><b>Welcome letter</b></h3>
     <p>&nbsp;</p>
     <p><strong>Dear Guest,</strong></p>
     <p>We are delighted to welcome you to the annual <em>Flavorful Tuscany Meetup</em> and hope you will enjoy the programme as well as your stay at the <a href="https://ckeditor.com">Bilancino Hotel</a>.</p>
@@ -21,7 +20,6 @@ function App() {
     return (
         <div>
             <Editcom data={data} />
-            {/* <Imagecom/> */}
         </div>
     );
 }
