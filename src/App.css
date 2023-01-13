@@ -89,9 +89,8 @@ img{
 }
 
 .container {
-  text-align: center;
   background-color: #ffffff;
-  width: 100vw;
+  width: 75vw;
   padding: 50px 30px;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -100,7 +99,7 @@ img{
   border-radius: 10px;
   border: 2px solid rgb(212, 206, 206);
   border-radius: 10px;
-  height: 100vh;
+  height: 75vh;
 }
 
 .options {
