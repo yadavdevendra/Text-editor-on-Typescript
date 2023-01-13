@@ -169,7 +169,9 @@ img{
   background-color: #d5d6d6;
   opacity: 1;
 }
-
+img{
+  width: 60px;
+}
 
 
 
