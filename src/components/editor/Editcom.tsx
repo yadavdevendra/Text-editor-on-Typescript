@@ -57,7 +57,7 @@ export function Editcom({ data }: any): ReactElement {
     }
     function handleInsertImage() {
         var data = window.prompt();
-        document.execCommand("insertImage", false, `${data}`);
+        document.execCommand("insertImage", false, `${data}`||"https://images.meesho.com/images/products/64842144/nm3ko_512.jpg");
     }
     return (
         <div className="container">
