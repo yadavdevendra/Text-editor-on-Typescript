@@ -15,10 +15,8 @@ export function Editcom({ data }: any): ReactElement {
         console.log("E", newdata)
         setfirst(newdata)
     }
-
-
     function onHeading1Click(e: any) {
-        const heading: string = e.target
+        const heading: string = e.target.value
         if (heading) {
             document.execCommand('formatBlock', false, `${heading}`);
         }
