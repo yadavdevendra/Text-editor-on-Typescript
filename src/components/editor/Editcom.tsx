@@ -1,11 +1,11 @@
 import React, { ReactElement, useState } from "react";
 import parse from "html-react-parser";
-import { options } from './data'
+import { options ,data} from './data'
 import { FaBootstrap, FaItalic, FaUnderline, FaAlignCenter, FaAlignLeft, FaAlignRight, FaLink, FaListOl, FaListUl, FaUndo, FaRedo, FaCamera } from "react-icons/fa";
 
 
 
-export function Editcom({ data }: any): ReactElement {
+export function Editcom(): ReactElement {
     const [first, setfirst] = useState("")
     console.log("first", first);
 
@@ -22,8 +22,9 @@ export function Editcom({ data }: any): ReactElement {
         }
     }
     const handlebold = () => {
+       const dev= document.execCommand("bold")
+        console.log(dev);
 
-        document.execCommand("bold")
     };
     const handleitalic = () => {
         document.execCommand("italic");
@@ -56,8 +57,8 @@ export function Editcom({ data }: any): ReactElement {
         document.execCommand("justifyRight");
     }
     function handleInsertImage() {
-        var data = window.prompt();
-        document.execCommand("insertImage", false, `${data}`||"https://images.meesho.com/images/products/64842144/nm3ko_512.jpg");
+        var insertdata = window.prompt();
+        document.execCommand("insertImage", false, `${insertdata}`||"https://images.meesho.com/images/products/64842144/nm3ko_512.jpg");
     }
     return (
         <div className="container">
